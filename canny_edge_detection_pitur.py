@@ -1,3 +1,5 @@
+# Source: https://github.com/StefanPitur/Edge-detection---Canny-detector/blob/master/canny.py
+
 import cv2
 import numpy as np
 
@@ -48,9 +50,9 @@ def non_maximum_suppression(image, angles):
             if image[i, j] >= value_to_compare:
                 suppressed[i, j] = image[i, j]
     suppressed = np.multiply(suppressed, 255.0 / suppressed.max())
-    cv2.imshow('Image', suppressed)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    # cv2.imshow('Image', suppressed)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
     return suppressed
 
     
@@ -88,9 +90,9 @@ def Canny(image, low, high):
     image = non_maximum_suppression(image, angles)
     gradient = np.copy(image)
     image = double_threshold_hysteresis(image, low, high)
-    cv2.imshow("Image",image)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    # cv2.imshow("Image",image)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
     return image, gradient
 
 def DetectEdges(fi):
@@ -117,4 +119,4 @@ def DetectEdges2(fi):
     print("Edges detected")
     return out_image
 
-DetectEdges("test\kitty.webp")
+DetectEdges("kitty.webp")
