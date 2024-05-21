@@ -6,7 +6,6 @@ This is my Edge Detection implementation via pytorch. I was originally using Ste
 Elapsed Conversion Time: 8.2008 seconds, Pitur's Implementation
 Elapsed Conversion Time: 0.0270 seconds, Device: cpu
 Elapsed Conversion Time: 0.6266 seconds, Device: cuda
-
 ```
 | PyTorch | OpenCV |
 |:-------------------------------------------:|:-------------------------------------------:|
